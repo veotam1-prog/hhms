@@ -1,7 +1,7 @@
 /* เก็บเฉพาะหน้าห่อและไอคอนไว้ในเครื่อง ให้เปิดแอปได้เร็ว
    ข้อมูลของระบบโหลดจาก Google ทุกครั้ง (ไม่เก็บไว้ในเครื่อง) */
-var CACHE = 'hhms-shell-v1';
-var SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
+var CACHE = 'hhms-shell-v2';
+var SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
 });
